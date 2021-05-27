@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://www.kandx.icu/2021/05/27/move-hexo/</loc>
+    
+    <lastmod>2021-05-27</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>https://www.kandx.icu/2021/03/25/strategy/</loc>
     
     <lastmod>2021-05-27</lastmod>
@@ -16,13 +23,6 @@
   </url>
   
   <url>
-    <loc>https://www.kandx.icu/2021/03/07/screw/</loc>
-    
-    <lastmod>2021-05-27</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>https://www.kandx.icu/2021/04/28/rabbitMQ%E5%AE%89%E8%A3%85/</loc>
     
     <lastmod>2021-05-27</lastmod>
@@ -30,7 +30,7 @@
   </url>
   
   <url>
-    <loc>https://www.kandx.icu/2021/03/13/page/</loc>
+    <loc>https://www.kandx.icu/2021/03/07/screw/</loc>
     
     <lastmod>2021-05-27</lastmod>
     
@@ -52,6 +52,13 @@
   
   <url>
     <loc>https://www.kandx.icu/2021/05/07/%E6%9C%8D%E5%8A%A1%E5%99%A8%E8%87%AA%E5%90%AFjar%E5%8C%85/</loc>
+    
+    <lastmod>2021-05-27</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://www.kandx.icu/2021/03/13/page/</loc>
     
     <lastmod>2021-05-27</lastmod>
     
@@ -192,6 +199,27 @@
     <priority>0.6</priority>
   </url>
   
+  <url>
+    <loc>https://www.kandx.icu/tags/hexo/</loc>
+    <lastmod>2021-05-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kandx.icu/tags/%E5%9B%BE%E5%BA%8A/</loc>
+    <lastmod>2021-05-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kandx.icu/tags/CDN/</loc>
+    <lastmod>2021-05-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
 
   
   <url>
@@ -231,6 +259,13 @@
   
   <url>
     <loc>https://www.kandx.icu/categories/Linux/</loc>
+    <lastmod>2021-05-27</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.kandx.icu/categories/hexo/</loc>
     <lastmod>2021-05-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
