@@ -1,0 +1,9 @@
+# 允许所有用户代理的浏览器爬虫进行访问（爬取数据）
+User-agent: *
+Allow: /
+
+# 不允许访问的内容
+Disallow: /img/
+Disallow: /photos/
+
+Sitemap: https://www.kandx.icu/sitemap.xml
