@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>hexo多台终端同步更新</title>
+      <link href="2021/05/31/hexo-synchronization/"/>
+      <url>2021/05/31/hexo-synchronization/</url>
+      
+        <content type="html"><![CDATA[<h1>创建私有仓库</h1><p>默认已经拥有GitHub账号</p><p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210531103734694.png" alt="创建私有仓库"></p><ul><li>仓库名称随意只要不合之前的仓库名称重复即可</li><li>仓库类型建议选择私有的,如果你想公开的话也可以</li><li>然后点击<strong>Create repository</strong> 创建即可</li></ul><h1>建立本地git仓库</h1><blockquote><p>首先删除主题.git文件</p></blockquote><p>这里我用的是Jerry大佬的<strong>butterfly</strong>主题,其它主题的.git文件路径与之类似</p><p>在<code>E:\software\workspace\blog\themes\butterfly</code> 找到一个名为 <code>.git</code> 的文件删除即可,如果你是Linux系统的话执行这个命令:</p><pre class="language-shell" data-language="shell"><code class="language-shell">rm -rm $&#123;你的主题路径&#125;&#x2F;.git</code></pre><blockquote><p>初始化本地仓库</p></blockquote><pre class="language-shell" data-language="shell"><code class="language-shell">git init</code></pre><p>初始化成功后我们可以看到根目录多了一个<code>.git</code>的文件</p><p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210531104551010.png" alt="初始化本地仓库"></p><blockquote><p>查看.gitignore文件</p></blockquote><p>文件内容为:</p><pre class="language-none"><code class="language-none">.DS_StoreThumbs.dbdb.json*.lognode_modules&#x2F;public&#x2F;.deploy*&#x2F;</code></pre><p>如果没有见添加,没有这个文件就手动创建</p><h1>本地仓库推送到云端</h1><blockquote><p>添加私有仓库地址</p></blockquote><pre class="language-shell" data-language="shell"><code class="language-shell">git remote add origin $&#123;私有仓库地址&#125;</code></pre><blockquote><p>将所有文件添加到缓存中</p></blockquote><pre class="language-shell" data-language="shell"><code class="language-shell">git add .</code></pre><blockquote><p>将暂存区的文件提交到当前分支</p></blockquote><pre class="language-shell" data-language="shell"><code class="language-shell">git commit -m &quot;$&#123;提交信息备注&#125;&quot;</code></pre><blockquote><p>将当前分支修改内容提交到远程私有仓库</p></blockquote><pre class="language-shell" data-language="shell"><code class="language-shell">git push -u origin master</code></pre><p>至此,已经完成将本地博客配置以及文章完全备份到私有仓库中</p><h1>在另一台终端进行hexo写作</h1><p>默认另一台电脑已经有了<strong>nodejs,hexo,git</strong>的环境</p><blockquote><p>clone私有仓库代码</p></blockquote><pre class="language-shell" data-language="shell"><code class="language-shell">git clone $&#123;私有仓库地址&#125;</code></pre><p>克隆完成后hexo的配置文章等已经保存到了本地</p><blockquote><p>hexo的npm依赖安装</p></blockquote><p><strong>注意:<strong>这里千万不要使用</strong>hexo init</strong>命令,如果使用了这个文件夹就已经和私有仓库断开链接了,直接安装依赖即可</p><pre class="language-shell" data-language="shell"><code class="language-shell">npm install</code></pre><blockquote><p>hexo文件生成和服务开启</p></blockquote><pre class="language-shell" data-language="shell"><code class="language-shell">hexo ghexo s</code></pre><p>查看<code>http://$&#123;ip&#125;:4000</code>博客是否有问题.如果没有问题的话,就代表hexo迁移成功</p><h1>hexo同步</h1><p>当在一台电脑上更新完博客后,使用命令将更新的内容同步到私有仓库,这样另一台电脑直接拉取就可以保持同步更新了</p><pre class="language-shell" data-language="shell"><code class="language-shell"># 把新建的文件放到暂缓区git add .# 将暂缓区内容提交到当前本地分支git commit -m &quot;$&#123;提交信息备注&#125;&quot;# 先拉去私有仓库,看看有没有新的内容git pull origin master# 如果有冲突根据提示进行修改即可# 拉取完成后,把本地更新内容提交到私有仓库git push -u origin master</code></pre><p>另一台电脑写文章之前只需要<code>pull</code>私有仓库更新内容就可以了,到这里多台终端同布更新博客已经部署完成.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> hexo </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> hexo </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>NACOS使用</title>
       <link href="2021/05/28/use-nacos/"/>
       <url>2021/05/28/use-nacos/</url>
