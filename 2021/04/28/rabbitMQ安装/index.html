@@ -152,12 +152,12 @@
 <p><strong>注意:</strong> 本文所用的版本为 <strong>erlang-v23.1.4</strong> 和 <strong>rabbitmq-server-3.8.9</strong> ,请注意rabbitmq和erlang版本对应关系,具体可以参考<a target="_blank" rel="noopener" href="https://www.rabbitmq.com/which-erlang.html">官网</a></p>
 <h1>安装</h1>
 <h3 id="1-将-erlang-和-rabbitmq-上传到服务器或者虚拟上">1. 将 erlang 和 rabbitmq 上传到服务器或者虚拟上</h3>
-<p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210428103247316.png" alt="image-20210428103247316"></p>
+<p><img src= "https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/832afe33ly1gbi87195tcg20m80godif.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210428103247316.png" alt="image-20210428103247316"></p>
 <h3 id="2-首先使用命令安装-erlang">2. 首先使用命令安装 erlang</h3>
 <pre class="language-shell" data-language="shell"><code class="language-shell">yum -y install erlang-23.1.4-1.el7.x86_64.rpm</code></pre>
 <h3 id="3-使用命令查看-erlang-是否安装成功">3. 使用命令查看 erlang 是否安装成功</h3>
 <pre class="language-shell" data-language="shell"><code class="language-shell">erl -v</code></pre>
-<p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210428103642374.png" alt="image-20210428103642374"></p>
+<p><img src= "https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/832afe33ly1gbi87195tcg20m80godif.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210428103642374.png" alt="image-20210428103642374"></p>
 <h3 id="3-erlang-提示安装成功后-安装-rabbitmq">3. erlang 提示安装成功后,安装 rabbitmq</h3>
 <pre class="language-shell" data-language="shell"><code class="language-shell">yum -y install rabbitmq-server-3.8.9-1.el7.noarch.rpm</code></pre>
 <h3 id="4-启动-rabbitmq-服务">4. 启动 rabbitmq 服务</h3>
@@ -182,11 +182,11 @@ systemctl disable rabbitmq-server</code></pre>
 <blockquote>
 <p>在浏览器使用 ip + 端口 打开 web 管理页面</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210428105322802.png" alt="image-20210428105322802"></p>
+<p><img src= "https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/832afe33ly1gbi87195tcg20m80godif.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210428105322802.png" alt="image-20210428105322802"></p>
 <blockquote>
 <p>如果使用 guest 用户登录会有如下提示</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210428105452033.png" alt="image-20210428105452033"></p>
+<p><img src= "https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/832afe33ly1gbi87195tcg20m80godif.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210428105452033.png" alt="image-20210428105452033"></p>
 <blockquote>
 <p>创建一个可以远程登录用户</p>
 </blockquote>
@@ -245,7 +245,7 @@ rabbitmqctl set_user_tags admin administrator</code></pre>
 <blockquote>
 <p>然后使用 admin 用户登录 web 管理页面</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210428113149245.png" alt="image-20210428113149245"></p>
+<p><img src= "https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/832afe33ly1gbi87195tcg20m80godif.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210428113149245.png" alt="image-20210428113149245"></p>
 <h1>rabbitmq 常用命令</h1>
 <pre class="language-shell" data-language="shell"><code class="language-shell">&#x2F;&#x2F; 新增用户
 rabbitmqctl add_user $&#123;账号&#125; $&#123;密码&#125;

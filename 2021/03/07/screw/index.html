@@ -287,16 +287,16 @@ void documentGeneration() &#123;
 <h1>生成效果</h1>
 <ul>
 <li>html格式<br>
-<img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210313151840868.png" alt="image-20210313151840868"></li>
+<img src= "https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/832afe33ly1gbi87195tcg20m80godif.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210313151840868.png" alt="image-20210313151840868"></li>
 <li>Markdown格式<br>
-<img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210313151938771.png" alt="image-20210313151938771"></li>
+<img src= "https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/832afe33ly1gbi87195tcg20m80godif.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210313151938771.png" alt="image-20210313151938771"></li>
 <li>word格式<br>
-<img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210313151708009.png" alt="image-20210313151708009"></li>
+<img src= "https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/832afe33ly1gbi87195tcg20m80godif.gif" data-lazy-src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210313151708009.png" alt="image-20210313151708009"></li>
 </ul>
 <h1>需要注意的几点</h1>
 <ul>
 <li>如果是Mysql数据库MySQL的驱动必须是6以上因为screw不支持<code>com.mysql.jdbc.driver</code> 。如果使用了5版本的驱动就会出现下面的错误：<br>
-<img src="https://blog.kandx.icu/main/388cfeb2cc59209a770fc275336fb760.png" alt="image.png"></li>
+<img src= "https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/832afe33ly1gbi87195tcg20m80godif.gif" data-lazy-src="https://blog.kandx.icu/main/388cfeb2cc59209a770fc275336fb760.png" alt="image.png"></li>
 <li>生成的文档乱码：MySQL的URL中加入<code>?characterEncoding=UTF-8</code></li>
 <li>出现<code>Caused by: java.lang.NoSuchFieldError: VERSION_2_3_30</code>：检查项目<code>freemarker</code>依赖，这是由于版本过低造成的，升级版本为2.3.30即可。</li>
 <li>MySQL数据库表和列字段有说明，生成的文档没有说明：URL链接加入<code>useInformationSchema=true</code>。</li>
