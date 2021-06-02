@@ -4,7 +4,34 @@
   
     
     <entry>
-      <title>netty-encoder</title>
+      <title>MongoDB无法启动</title>
+      <link href="2021/06/02/resolve-mongod-error/"/>
+      <url>2021/06/02/resolve-mongod-error/</url>
+      
+        <content type="html"><![CDATA[<h1>问题重现</h1><p>启动项目发现MongoDB连接不上,第一反应是感觉数据库的服务挂了,连接服务器使用命令查看MongoDB服务</p><pre class="language-shell" data-language="shell"><code class="language-shell">systemctl status mongod</code></pre><p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210602110059327.png" alt="mongo服务挂了"></p><p>尝试手动重启:</p><pre class="language-shell" data-language="shell"><code class="language-shell">systemctl restart mongod</code></pre><p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210602110429545.png" alt="手动重启报错"></p><p>根据提示查看原因</p><pre class="language-shell" data-language="shell"><code class="language-shell">systemctl status mongod</code></pre><p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210602110545256.png" alt="错误状态"></p><p>发现报了一句: <code> mongod.service: control process exited, code=exited status=14</code></p><h1>解决方法</h1><h2 id="查看用户权限">查看用户权限</h2><blockquote><p>首先先要查看 mongodb 的用户权限</p></blockquote><pre class="language-shell" data-language="shell"><code class="language-shell">cd &#x2F;var&#x2F;lib&#x2F;mongodbll</code></pre><p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210602111002388.png" alt="mongodb的权限"></p><p>只要用户和用户组不是<code>mongod</code> 的统一修改一下</p><pre class="language-shell" data-language="shell"><code class="language-shell">chown -R mongod:mongod &#x2F;var&#x2F;lib&#x2F;mongodb</code></pre><mark class="hl-label pink">解释:mongod是mongo服务的用户,每个人的可能不一样根据自己的来</mark> <blockquote><p>最后查看一下mongodb-27017.sock的用户权限</p></blockquote><pre class="language-shell" data-language="shell"><code class="language-shell">cd &#x2F;tmp&#x2F;ll</code></pre><p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210602111505131.png" alt="权限查看"></p><p>我的是因为这里不是<code>mongod</code> 而导致服务无法正常启动,修改之后即可</p><pre class="language-shell" data-language="shell"><code class="language-shell">chown mongod:mongod &#x2F;tmp&#x2F;mongodb-27017.sock</code></pre><blockquote><p>重启MongoDB服务</p></blockquote><pre class="language-shell" data-language="shell"><code class="language-shell">systemctl restart mongod</code></pre><p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210602111715632.png" alt="启动成功"></p><p>至此问题已经解决,问题解决思路<a href="https://askubuntu.com/questions/823288/mongodb-loads-but-breaks-returning-status-14">参考</a></p><h3 id="一言">一言</h3><blockquote><p>世人慌慌张张，不过图碎银几两。</p><p>偏偏这碎银几两，能解世间万种慌张。</p><p>​--GAI(空城计)</p></blockquote>]]></content>
+      
+      
+      <categories>
+          
+          <category> MongoDB </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MongoDB </tag>
+            
+            <tag> bug </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>netty解码器</title>
       <link href="2021/06/02/netty-encoder/"/>
       <url>2021/06/02/netty-encoder/</url>
       
