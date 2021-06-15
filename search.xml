@@ -4,7 +4,36 @@
   
     
     <entry>
-      <title>netty-bug01</title>
+      <title>安装Centos7可视化页面</title>
+      <link href="2021/06/15/install-centos-window/"/>
+      <url>2021/06/15/install-centos-window/</url>
+      
+        <content type="html"><![CDATA[<h1>准备工作</h1><ul><li><p>检查一下服务器是否有外网</p><p>命令: <code>ping www.baidu.com</code></p><p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210615102248516.png" alt="检查服务器网络"></p></li><li><p>yum命令是否可用</p><p>命令: <code>yum --version</code></p><p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210615102518478.png" alt="yum版本信息"></p></li></ul><h1>开始安装</h1><blockquote><p>安装可视化系统</p></blockquote><p>命令: <code>yum groupinstall -y &quot;X Window System&quot;</code></p><p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210615103238948.png" alt="安装完成"></p><blockquote><p>检查是否安装成功</p></blockquote><p>命令: <code>yum grouplist</code></p><p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210615103648470.png" alt="检查是否安装"></p><blockquote><p>安装GNOME</p></blockquote><p>命令: <code>yum groupinstall -y &quot;GNOME Desktop&quot;</code></p><p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210615104412184.png" alt="安装GNOME"></p><blockquote><p>设置默认启动可视化页面</p></blockquote><ul><li><p>检查当前模式</p><p>命令: <code>systemctl get-default</code></p><p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210615104549532.png" alt="检查当前模式"></p></li><li><p>修改启动模式为图形化页面</p><p>命令: <code>systemctl set-default graphical.target</code></p><p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210615104723741.png" alt="修改启动模式为图形化页面"></p><p>重启服务器查看效果</p></li></ul><h1>可视化页面配置</h1><ul><li><p>语言配置</p><p>珍爱生命,远离中文</p><p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210615105132584.png" alt="语言配置"></p></li><li><p>键盘配置</p><p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210615105258584.png" alt="键盘配置"></p></li><li><p>隐私配置</p><p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210615105514311.png" alt="默认即可"></p></li><li><p>时区配置</p><p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210615105553786.png" alt="根据需要配置时区"></p></li><li><p>在线账号(跳过即可)</p><p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210615105654858.png" alt="跳过"></p></li><li><p>账号</p><p>我这里直接输入<code>root</code></p><p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210615105756048.png" alt="账号"></p></li><li><p>设置密码</p><p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210615105838175.png" alt="设置密码"></p></li><li><p>设置完成,开始使用</p><p><img src="https://cdn.jsdelivr.net/gh/daochen23/blog_images@master/img/image-20210615105910537.png" alt="设置完成"></p></li></ul>]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+            <tag> 服务器 </tag>
+            
+            <tag> Centos </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>netty使用@Autowried注解</title>
       <link href="2021/06/07/netty-bug01/"/>
       <url>2021/06/07/netty-bug01/</url>
       
