@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>Java集合之HashSet</title>
+      <link href="2021/06/29/Read-HashSet/"/>
+      <url>2021/06/29/Read-HashSet/</url>
+      
+        <content type="html"><![CDATA[<h1>类结构</h1><p><img src="https://img.kandx.icu/img/20210629200909.png" alt="HashSet类关系"></p><p><code>HashSet</code>是<code>Set</code>接口的主要实现类,它是<strong>无序的、不可重复的、线程不安全</strong>的,可以存储<code>null</code>。需要知道的是,无序性并不是随机性,**存储的数据在底层数组中并非按照索引顺序添加,而是根据数据的哈希值决定的.**而不可重复性则是保证添加添加的元素按照<code>equals()</code>判断时,不可以返回<code>true</code>,即相同的元素只能有一个.</p><h1>源码分析</h1><blockquote><p>底层实现</p></blockquote><p><img src="https://img.kandx.icu/img/20210629203658.png" alt="HashSet底层实现"></p><p>可以看出来<code>HashSet</code>的底层数据结构其实是用<code>HashMap</code>实现的,具体的<code>HashMap</code>的源码分析请看这个文章</p><blockquote><p>添加元素</p></blockquote><pre class="language-java" data-language="java"><code class="language-java"><span class="token keyword">public</span> <span class="token keyword">boolean</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token class-name">E</span> e<span class="token punctuation">)</span> <span class="token punctuation">&#123;</span>    <span class="token keyword">return</span> map<span class="token punctuation">.</span><span class="token function">put</span><span class="token punctuation">(</span>e<span class="token punctuation">,</span> PRESENT<span class="token punctuation">)</span><span class="token operator">==</span><span class="token keyword">null</span><span class="token punctuation">;</span><span class="token punctuation">&#125;</span></code></pre><p>可以看到调用的<code>HashMap</code>的方法进行添加的,这里就不在解释了.我们解释一下<strong>无序性和不可重复性</strong>的添加过程:</p><p>向<code>HashSet</code>中添加元素<code>a</code>,首先调用元素<code>a</code>中的<code>hashCode()</code>,计算元素<code>a</code>的哈希值.计算出的哈希值通过某种算法计算出在<code>HashSet</code>底层数组中的存放位置(索引位置),判断数组此位置是否已经有元素:</p><ul><li>如果此位置没有元素,则元素添加成功.</li><li>如果此位置有其它元素<code>b</code>(或者以链表形式存在的多个元素),则比较元素<code>a</code>和元素<code>b</code>的哈希值:<ul><li>如果哈希值不相同,则元素<code>a</code>添加成功</li><li>如果哈希值相同,那么就需要调用元素<code>a</code>所在类的<code>equals()</code>:<ul><li><code>equals()</code>返回<code>true</code>,元素<code>a</code>添加失败</li><li><code>equals()</code>返回<code>false</code>,元素<code>a</code>添加成功</li></ul></li></ul></li></ul><p>另外对于添加成功的情况而言:元素<code>a</code>与已经存在指定索引位置上数据以链表的形式存储:</p><ul><li><p>JDK1.7: 元素<code>a</code>添加到元素<code>b</code>的位置</p><p><img src="https://img.kandx.icu/img/20210702102015.png" alt="添加前"></p><p><img src="https://img.kandx.icu/img/20210702102103.png" alt="添加后"></p><p>元素<code>a</code>放到数组中,指向原来的元素</p></li><li><p>JDK1.8: 元素<code>a</code>添加到元素<code>b</code>的位置</p><p><img src="https://img.kandx.icu/img/20210702102015.png" alt="添加前"></p><p><img src="https://img.kandx.icu/img/20210702102306.png" alt="添加后"></p></li></ul><p>原来的元素在数组中,指向元素<code>a</code></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Java </category>
+          
+          <category> 小知识点 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 集合 </tag>
+            
+            <tag> Set </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java集合之LinkedList</title>
       <link href="2021/06/27/Read-LinkedList/"/>
       <url>2021/06/27/Read-LinkedList/</url>
