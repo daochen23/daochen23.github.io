@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>git</title>
+      <link href="2022/01/03/git/"/>
+      <url>2022/01/03/git/</url>
+      
+        <content type="html"><![CDATA[<h1>基础篇</h1><h2 id="git-commint">git commint</h2><h3 id="解释">解释</h3><p>创建一个新的提交记录</p><h3 id="图解">图解</h3><p><code>git commit</code></p><p><img src="https://img.kandx.icu/img/20220103171457.png" alt="提交前"></p><p><img src="https://img.kandx.icu/img/20220103171537.png" alt="提交后"></p><h2 id="git-branch">git branch</h2><h3 id="解释-2">解释</h3><p>创建一个新的分支</p><h3 id="图解-2">图解</h3><p><code>git branch bugFix</code></p><p><img src="https://img.kandx.icu/img/20220103172005.png" alt="创建 bugFix 分支"></p><p><code>git checkout bugFix</code></p><p><img src="https://img.kandx.icu/img/20220103172130.png" alt="切换分支"></p><p>简化命令：<code>git checkout -b &lt;new branch name&gt;</code> 创建一个新的分支同时切换到新的分支</p><h2 id="git-merge">git merge</h2><h3 id="解释-3">解释</h3><p>合并分支。例如：有两个分支AB，现在在A分支上面，想把A分支的修改合并到B分支上面，就需要先切换到B分支上，然后进行<code>git merge A</code></p><h3 id="图解-3">图解</h3><p><code>git branch bugFix</code></p><p><img src="https://img.kandx.icu/img/20220103172850.png" alt="创建新分支"></p><p><code>git checkout bugFix</code></p><p><img src="https://img.kandx.icu/img/20220103172934.png" alt="切换分支"></p><p><code>git commit</code></p><p><img src="https://img.kandx.icu/img/20220103173012.png" alt="提交一次"></p><p><code>git checkout main</code></p><p><img src="https://img.kandx.icu/img/20220103173058.png" alt="切回主分支"></p><p><code>git commit</code></p><p><img src="https://img.kandx.icu/img/20220103173136.png" alt="提交一次"></p><p><code>git merge bugFix</code></p><p><img src="https://img.kandx.icu/img/20220103173305.png" alt="将bugFix分支的修改合并到主分支"></p><h2 id="git-rebase">git rebase</h2><h3 id="解释-4">解释</h3><p>取出一系列的提交记录，“复制”他们，然后在另一个地方逐个放下去</p><h3 id="图解-4">图解</h3><p><code>git checkout -b bugFix</code></p><p><img src="https://img.kandx.icu/img/20220103174024.png" alt="新建并切换到bugFix分支"></p><p><code>git commit</code></p><p><img src="https://img.kandx.icu/img/20220103174105.png" alt="提交一次"></p><p><code>git checkout main</code></p><p><img src="https://img.kandx.icu/img/20220103174151.png" alt="切回主分支"></p><p><code>git commit</code></p><p><img src="https://img.kandx.icu/img/20220103174228.png" alt="提交一次"></p><p><code>git checkout bugFix</code></p><p><img src="https://img.kandx.icu/img/20220103174309.png" alt="切回bugFix"></p><p><code>git rebase main</code></p><p><img src="https://img.kandx.icu/img/20220103174432.png" alt="rebase main分支上"></p><h1>高级篇</h1><p>稍后补充。。。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>Java8 List转Map Key重复问题</title>
       <link href="2021/11/09/toMap-bug/"/>
       <url>2021/11/09/toMap-bug/</url>
